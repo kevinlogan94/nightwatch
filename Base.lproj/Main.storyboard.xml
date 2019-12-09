@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Night_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oAB-5h-YE6">
+                                <rect key="frame" x="0.0" y="82" width="375" height="696"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardCell" textLabel="Gbk-ey-aDc" style="IBUITableViewCellStyleDefault" id="qxL-re-s20">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxL-re-s20" id="8xY-ph-yb5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gbk-ey-aDc">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xWr-YQ-Q5a"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3DL-qL-ZiQ"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nni-Bl-BMI">
+                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WYG-xW-cfR"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lvM-h6-zwJ"/>
+                                    <barButtonItem enabled="NO" title="Night Mode" id="uLR-Xk-gIP"/>
+                                    <barButtonItem style="plain" id="BCQ-FS-hQ3">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="qwQ-i3-fLi">
+                                            <rect key="frame" x="308" y="9.6666666666666643" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="nightModeButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="DhX-4O-fYY"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="left" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3bh-R6-7Rz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a new list item" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EVN-Nb-JJ0">
+                                        <rect key="frame" x="15" y="5" width="315" height="25"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.59718036167512689" green="0.59718036167512689" blue="0.59718036167512689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3U-Fb-ZdZ">
+                                        <rect key="frame" x="330" y="5" width="35" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="JOj-IZ-BgS"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Plus"/>
+                                        <connections>
+                                            <action selector="addListItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bEr-Di-P1S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UhN-bx-jIZ"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="5" leading="15" bottom="0.0" trailing="10"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3bh-R6-7Rz" secondAttribute="trailing" id="3eK-Je-tHC"/>
+                            <constraint firstItem="3bh-R6-7Rz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3w6-Bz-4x6"/>
+                            <constraint firstItem="nni-Bl-BMI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6gc-zv-7wV"/>
+                            <constraint firstItem="nni-Bl-BMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A4X-PD-Bhm"/>
+                            <constraint firstItem="oAB-5h-YE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R5Q-TR-uaG"/>
+                            <constraint firstItem="3bh-R6-7Rz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TVr-Ub-bfy"/>
+                            <constraint firstItem="oAB-5h-YE6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yb9-sv-6qT"/>
+                            <constraint firstItem="oAB-5h-YE6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dm2-Hs-aXN"/>
+                            <constraint firstItem="3bh-R6-7Rz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1V-Yd-eqw"/>
+                            <constraint firstItem="nni-Bl-BMI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m0W-Ma-aXV"/>
+                            <constraint firstItem="3bh-R6-7Rz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uem-Wq-ucV"/>
+                            <constraint firstItem="oAB-5h-YE6" firstAttribute="top" secondItem="3bh-R6-7Rz" secondAttribute="bottom" constant="8" id="v1v-pR-iEx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="qwQ-i3-fLi" id="uIK-Dz-ZTY"/>
+                        <outlet property="newListItem" destination="EVN-Nb-JJ0" id="3f9-Lr-3GI"/>
+                        <outlet property="plusButton" destination="X3U-Fb-ZdZ" id="WWW-Mn-kdU"/>
+                        <outlet property="stackView" destination="3bh-R6-7Rz" id="g1Y-nt-DQX"/>
+                        <outlet property="tableView" destination="oAB-5h-YE6" id="OMV-kR-R1y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149.27536231884059" y="151.63043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Plus" width="60" height="60"/>
+    </resources>
+</document>
